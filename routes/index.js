@@ -6,7 +6,7 @@ const process = require('process');
 router.get('/', function(req, res, next) {
   const envVal = process.env['EXTRAINFO'] || 'undefined';
   const extra = `EXTRAINFO is ${envVal}`;
-  res.render('index', { title: 'Express!', extra1: extra, extra2: 'extra 2!' });
+  res.render('index', { title: 'Express!', extra1: extra, extra2: 'extra 2!', nodeVersion: process.version });
 });
 
 module.exports = router;
